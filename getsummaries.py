@@ -19,7 +19,7 @@ def button_click(number,time):
         except:
             continue
 def add_to_csv(index,news_title,news_summary,source_name,link):
-    with open('documentsummaries.csv','a') as fd:
+    with open('dataset1.csv','a') as fd:
         writer = csv.writer(fd)
         writer.writerow([index,news_title,news_summary,source_name,link])
 

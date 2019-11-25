@@ -21,7 +21,7 @@ def button_click(number,time):
         except:
             continue
 def add_to_csv(index,news_title,news_summary,source_name,news_article,link):
-    with open('document.csv','a') as fd:
+    with open('abstractive_dataset1_11.csv','a') as fd:
         writer = csv.writer(fd)
         writer.writerow([index,news_title,news_summary,source_name,news_article,link])
 
@@ -647,7 +647,7 @@ def get_from_inshots():
     driver_new.quit()
 
 def get_from_csv():
-    with open('documentsummaries.csv', 'r',errors='ignore') as f:
+    with open('dataset1.csv', 'r',errors='ignore') as f:
           reader = csv.reader(f,delimiter=',')
           your_list = list(reader)
           for i in range(len(your_list)):
